@@ -1,165 +1,273 @@
 {% extends "layout.html" %}
 {% block body %}
 
-  <body>
+<body>
 
-    <!-- Page Header Start -->
-    <div
-      class="container-fluid page-header py-5 mb-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <h1 class="display-1 text-white animated slideInDown">Services</h1>
-        <nav aria-label="breadcrumb animated slideInDown">
-          <ol class="breadcrumb text-uppercase mb-0">
-            <li class="breadcrumb-item">
-              <a class="text-white" href="#">Home</a>
-            </li>
-            <li class="breadcrumb-item txt-primary" aria-current="page">
-              Services
-            </li>
-          </ol>
-        </nav>
-      </div>
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <h1 class="display-1 text-white animated slideInDown">Services</h1>
+      <nav aria-label="breadcrumb animated slideInDown">
+        <ol class="breadcrumb text-uppercase mb-0">
+          <li class="breadcrumb-item">
+            <a class="text-white" href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item txt-primary" aria-current="page">
+            Services
+          </li>
+        </ol>
+      </nav>
     </div>
-    <!-- Page Header End -->
+  </div>
+  <!-- Page Header End -->
 
-    <!-- Service Start -->
-    <section>
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div
-            class="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style="max-width: 700px"
-          >
-            <div class="section-title">
-              <h6>Our Services</h6>
-              <h2 class="mb-4">
-                We Focus On Modern Architecture And Interior Design
-              </h2>
+  <!-- Service Start -->
+  <section>
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px">
+          <div class="section-title">
+            <h6>Our Services</h6>
+            <h2 class="mb-4">
+              Unlocking Potential Through Innovation and Technology
+            </h2>
+          </div>
+          <p class="lead">At Atmam Edutech Publications, we offer comprehensive solutions designed to transform education and empower businesses through cutting-edge technology and expertise.</p>
+        </div>
+
+        <!-- Service 1 - Web Development -->
+        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-6">
+            <div class="position-relative overflow-hidden rounded">
+              <img src="{{ url_for('static', filename='img/web-dev.jpg') }}" alt="Web Development" class="img-fluid w-100 shadow-lg" style="aspect-ratio: 16/9; object-fit: cover;">
+              <div class="overlay-gradient"></div>
             </div>
           </div>
-          <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-              <div
-                class="service-item d-flex position-relative text-center h-100"
-              >
-                <img class="bg-img" src="img/service-1.jpg" alt="Services" />
-                <div class="service-text p-5">
-                  <i class="fas fa-building mb-4 fa-4x"></i>
-                  <h3 class="mb-3">Architecture</h3>
-                  <p class="mb-4">
-                    We provide innovative architectural solutions that bring
-                    your visions to life, blending creativity and functionality.
-                  </p>
-                  <a class="btn" href="service.html">
-                    <i class="fa fa-plus me-3"></i>Read More
-                  </a>
-                </div>
-              </div>
+          <div class="col-lg-6">
+            <div class="service-text">
+              <i class="fas fa-code fa-3x txt-primary mb-3"></i>
+              <h3 class="mb-3">Web Development</h3>
+              <p>
+                We craft visually appealing and highly functional websites that engage users and drive results. Our
+                expertise spans across responsive designs, CMS development, e-commerce platforms, and API integration.
+              </p>
+              <ul class="service-list">
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Responsive and Mobile-First Design</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Custom CMS and API Development</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>SEO-Optimized Websites</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>E-commerce Solutions</li>
+              </ul>
+              <a href="/contact" class="btn btn-outline-body mt-3">Request a Quote</a>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-              <div
-                class="service-item d-flex position-relative text-center h-100"
-              >
-                <img class="bg-img" src="img/service-2.jpg" alt="Services" />
-                <div class="service-text p-5">
-                  <i class="fas fa-cogs mb-4 fa-4x"></i>
-                  <h3 class="mb-3">3D Animation</h3>
-                  <p class="mb-4">
-                    Our 3D animation services offer realistic visualizations to
-                    bring your designs to life, aiding in decision-making and
-                    project presentation.
-                  </p>
-                  <a class="btn" href="service.html">
-                    <i class="fa fa-plus me-3"></i>Read More
-                  </a>
-                </div>
-              </div>
+          </div>
+        </div>
+
+        <!-- Service 2 - Software Development -->
+        <div class="row g-5 align-items-center mb-5 flex-row-reverse wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-lg-6">
+            <div class="position-relative overflow-hidden rounded">
+              <img src="{{ url_for('static', filename='img/desktop.jpg') }}" alt="Software Development" class="img-fluid w-100 shadow-lg" style="aspect-ratio: 16/9; object-fit: cover;">
+              <div class="overlay-gradient"></div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-              <div
-                class="service-item d-flex position-relative text-center h-100"
-              >
-                <img class="bg-img" src="img/service-3.jpg" alt="Services" />
-                <div class="service-text p-5">
-                  <i class="fas fa-home mb-4 fa-4x"></i>
-                  <h3 class="mb-3">House Planning</h3>
-                  <p class="mb-4">
-                    We specialize in creating practical and aesthetically
-                    pleasing house plans that optimize space and functionality
-                    for your lifestyle.
-                  </p>
-                  <a class="btn" href="service.html">
-                    <i class="fa fa-plus me-3"></i>Read More
-                  </a>
-                </div>
-              </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-text">
+              <i class="fas fa-laptop-code fa-3x txt-primary mb-3"></i>
+              <h3 class="mb-3">Software Development</h3>
+              <p>
+                Our custom software solutions enhance business efficiency by automating processes and providing tailored
+                digital solutions. We specialize in desktop, web, and mobile applications that transform how you operate.
+              </p>
+              <ul class="service-list">
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Custom Software Solutions</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Cloud-Based Application Development</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>API and System Integration</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Mobile App Development</li>
+              </ul>
+              <a href="/contact" class="btn btn-outline-body mt-3">Discuss Your Project</a>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-              <div
-                class="service-item d-flex position-relative text-center h-100"
-              >
-                <img class="bg-img" src="img/service-4.jpg" alt="Services" />
-                <div class="service-text p-5">
-                  <i class="fas fa-paint-brush mb-4 fa-4x"></i>
-                  <h3 class="mb-3">Interior Design</h3>
-                  <p class="mb-4">
-                    Transform your living or working spaces with our interior
-                    design services that combine style and practicality for a
-                    lasting impact.
-                  </p>
-                  <a class="btn" href="service.html">
-                    <i class="fa fa-plus me-3"></i>Read More
-                  </a>
-                </div>
-              </div>
+          </div>
+        </div>
+
+        <!-- Service 3 - Research Journal Publications -->
+        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="col-lg-6">
+            <div class="position-relative overflow-hidden rounded">
+              <img src="{{ url_for('static', filename='img/journal.jpg') }}" alt="Research Journal Publications" class="img-fluid w-100 shadow-lg" style="aspect-ratio: 16/9; object-fit: cover;">
+              <div class="overlay-gradient"></div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-              <div
-                class="service-item d-flex position-relative text-center h-100"
-              >
-                <img class="bg-img" src="img/service-5.jpg" alt="Services" />
-                <div class="service-text p-5">
-                  <i class="fas fa-tools mb-4 fa-4x"></i>
-                  <h3 class="mb-3">Renovation</h3>
-                  <p class="mb-4">
-                    Our renovation services revitalize and refresh existing
-                    spaces, improving both aesthetics and functionality to meet
-                    modern needs.
-                  </p>
-                  <a class="btn" href="service.html">
-                    <i class="fa fa-plus me-3"></i>Read More
-                  </a>
-                </div>
-              </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-text">
+              <i class="fas fa-book-open fa-3x txt-primary mb-3"></i>
+              <h3 class="mb-3">Research Journal Publications</h3>
+              <p>
+                We publish high-quality research journals, offering a platform for scholars to share their knowledge and
+                contribute to the global academic community through rigorous peer-review processes.
+              </p>
+              <ul class="service-list">
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Peer-Reviewed International Journals</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Open Access Publication Model</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Global Distribution and Indexing</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Citation and Impact Factor Support</li>
+              </ul>
+              <a href="/contact" class="btn btn-outline-body mt-3">Submit Your Research</a>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-              <div
-                class="service-item d-flex position-relative text-center h-100"
-              >
-                <img class="bg-img" src="img/service-6.jpg" alt="Services" />
-                <div class="service-text p-5">
-                  <i class="fas fa-hammer mb-4 fa-4x"></i>
-                  <h3 class="mb-3">Construction</h3>
-                  <p class="mb-4">
-                    From ground-up construction to small-scale projects, we
-                    offer expert construction services to bring your plans into
-                    reality.
-                  </p>
-                  <a class="btn" href="service.html">
-                    <i class="fa fa-plus me-3"></i>Read More
-                  </a>
-                </div>
+          </div>
+        </div>
+
+        <!-- Service 4 - Educational Trainings -->
+        <div class="row g-5 align-items-center mb-5 flex-row-reverse wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-6">
+            <div class="position-relative overflow-hidden rounded">
+              <img src="{{ url_for('static', filename='img/girl-with-laptop.jpg') }}" alt="Educational Trainings" class="img-fluid w-100 shadow-lg" style="aspect-ratio: 16/9; object-fit: cover;">
+              <div class="overlay-gradient"></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-text">
+              <i class="fas fa-graduation-cap fa-3x txt-primary mb-3"></i>
+              <h3 class="mb-3">Educational Trainings</h3>
+              <p>
+                Our training programs are designed to enhance the skills of learners by providing industry-relevant
+                knowledge in emerging technologies and research methodologies with hands-on experience.
+              </p>
+              <ul class="service-list">
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Hands-On Workshops and Certifications</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Mentorship by Industry Experts</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Practical, Project-Based Learning</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Customized Corporate Training Programs</li>
+              </ul>
+              <a href="/contact" class="btn btn-outline-body mt-3">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5 - Textbook Publications -->
+        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-lg-6">
+            <div class="position-relative overflow-hidden rounded">
+              <img src="{{ url_for('static', filename='img/book-with-pen.jpg') }}" alt="Textbook Publications" class="img-fluid w-100 shadow-lg" style="aspect-ratio: 16/9; object-fit: cover;">
+              <div class="overlay-gradient"></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-text">
+              <i class="fas fa-book fa-3x txt-primary mb-3"></i>
+              <h3 class="mb-3">Textbook Publications</h3>
+              <p>
+                We publish educational textbooks aligned with modern curricula, ensuring comprehensive and quality
+                content that meets the needs of learners across various educational levels and disciplines.
+              </p>
+              <ul class="service-list">
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Curriculum-Based Publications</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Digital and Print Editions</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Global Reach and Impact</li>
+                <li><i class="fas fa-check-circle txt-primary me-2"></i>Interactive Learning Materials</li>
+              </ul>
+              <a href="/contact" class="btn btn-outline-body mt-3">Explore Our Publications</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Service End -->
+
+  <!-- Why Choose Us Start -->
+  <section class="bg-light py-5">
+    <div class="container py-5">
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px">
+        <div class="section-title">
+          <h6>Why Choose Us</h6>
+          <h2 class="mb-4">The Atmam Advantage</h2>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="feature-icon bg-primary text-white rounded-circle mb-4">
+                <i class="fas fa-medal"></i>
               </div>
+              <h5 class="mb-3">Quality Assurance</h5>
+              <p class="mb-0">We maintain rigorous quality standards across all our services, ensuring excellence in every project we undertake.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="feature-icon bg-primary text-white rounded-circle mb-4">
+                <i class="fas fa-users"></i>
+              </div>
+              <h5 class="mb-3">Expert Team</h5>
+              <p class="mb-0">Our team comprises industry experts and professionals with extensive experience in their respective fields.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="feature-icon bg-primary text-white rounded-circle mb-4">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h5 class="mb-3">Innovative Solutions</h5>
+              <p class="mb-0">We leverage the latest technologies and methodologies to deliver innovative solutions that address complex challenges.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Service End -->
+    </div>
+  </section>
+  <!-- Why Choose Us End -->
 
-  </body>
+  <!-- Custom CSS for this page -->
+  <style>
+    .service-list {
+      padding-left: 0;
+      list-style: none;
+    }
+    
+    .service-list li {
+      margin-bottom: 10px;
+    }
+    
+    .overlay-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+      border-radius: 5px;
+    }
+    
+    .feature-icon {
+      width: 70px;
+      height: 70px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+    
+    .bg-primary {
+      background-color: #d31e26 !important;
+    }
+    
+    .card {
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+    }
+  </style>
+
+</body>
+
 </html>
 {% endblock %}

@@ -1,6 +1,26 @@
 from flask import Flask, render_template
+from email_handler import email_bp, mail
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 app = Flask(__name__)
+
+# Mail configuration
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_USERNAME')
+
+# Initialize mail with app
+mail.init_app(app)
+
+# Register blueprint
+app.register_blueprint(email_bp)
 
 @app.route("/")
 def Home():
@@ -21,6 +41,14 @@ def Projects():
 @app.route("/contact") 
 def Contact():
     return render_template("contact.html")
+
+@app.route("/terms-conditions")
+def TermsConditions():
+    return render_template("terms-conditions.html")
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html"), 404
 
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
