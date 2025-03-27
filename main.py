@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from email_handler import email_bp, mail
 import os
 from dotenv import load_dotenv
@@ -21,6 +21,14 @@ mail.init_app(app)
 
 # Register blueprint
 app.register_blueprint(email_bp)
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(app.static_folder, 'img/favicon.png', mimetype='image/png')
+
+@app.route("/sitemap.xml")
+def sitemap():
+    return send_from_directory(app.static_folder, 'sitemap.xml', mimetype='application/xml')
 
 @app.route("/")
 def Home():

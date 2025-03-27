@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /projects
+Allow: /contact
+Allow: /terms-conditions
+
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://atmam.org/sitemap.xml
