@@ -24,11 +24,15 @@ app.register_blueprint(email_bp)
 
 @app.route("/favicon.ico")
 def favicon():
-    return send_from_directory(app.static_folder, 'img/favicon.png', mimetype='image/png')
+    return send_from_directory(app.static_folder, 'img/logo/favicon.ico', mimetype='image/x-icon')
 
 @app.route("/sitemap.xml")
 def sitemap():
     return send_from_directory(app.static_folder, 'sitemap.xml', mimetype='application/xml')
+
+@app.route("/robots.txt")
+def robots():
+    return send_from_directory(app.static_folder, 'robots.txt', mimetype='text/plain')
 
 @app.route("/")
 def Home():
