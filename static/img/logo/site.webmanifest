@@ -1,6 +1,8 @@
 {
     "name": "Atmam Edutech Publications Pvt. Ltd.",
     "short_name": "Atmam Edutech",
+    "description": "Atmam Edutech Publications Pvt. Ltd. is a leading provider of educational and technical publications. We offer a wide range of books, journals, and resources for students, researchers, and professionals.",
+    "start_url": "https://www.atmam.org",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
