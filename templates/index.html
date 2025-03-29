@@ -171,6 +171,305 @@
   </section>
   <!-- About End -->
 
+  <!-- Team Size Stastistics Start -->
+  <section id="team-size-statistics">
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5 mb-5">
+          <div class="col-lg-12 wow fadeIn" data-wow-delay="0.5s">
+            <div class="section-title text-center">
+              <h6>Our Growth Statistics</h6>
+              <h2 class="mb-4">
+                Tracking Our Progress and Future Goals
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Size Row -->
+        <div class="row g-5 mb-5">
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div class="section-title">
+              <h4 class="mb-3">Team Size Growth</h4>
+            </div>
+            <p>
+              Our team is comprised of experienced professionals who are dedicated to providing the best possible service
+              to our clients. We are continuously growing to meet the increasing demands of the education sector.
+            </p>
+            <!-- Team Size Table -->
+            <div class="team-size-table mt-4">
+              <table class="table table-bordered">
+                <thead class="table-primary">
+                  <tr>
+                    <th>Timeline</th>
+                    <th>Team Size</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Current</td>
+                    <td>10 employees</td>
+                  </tr>
+                  <tr>
+                    <td>After 3 Years</td>
+                    <td>30 employees</td>
+                  </tr>
+                  <tr>
+                    <td>After 5 Years</td>
+                    <td>120 employees</td>
+                  </tr>
+                  <tr>
+                    <td>After 10 Years</td>
+                    <td>520 employees</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.7s">
+            <div class="team-growth-chart">
+              <div class="chart-container" style="height: 300px; position: relative;">
+                <canvas id="teamGrowthChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Journals Row -->
+        <div class="row g-5 mb-5">
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.7s">
+            <div class="journals-growth-chart">
+              <div class="chart-container" style="height: 300px; position: relative;">
+                <canvas id="journalsGrowthChart"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div class="section-title">
+              <h4 class="mb-3">Number of Journals</h4>
+            </div>
+            <p>
+              We are committed to expanding our academic reach through quality publications. Our journal portfolio is growing steadily to cover diverse educational domains.
+            </p>
+            <!-- Journals Table -->
+            <div class="journals-table mt-4">
+              <table class="table table-bordered">
+                <thead class="table-primary">
+                  <tr>
+                    <th>Timeline</th>
+                    <th>Number of Journals</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Current</td>
+                    <td>15 journals</td>
+                  </tr>
+                  <tr>
+                    <td>After 3 Years</td>
+                    <td>25 journals</td>
+                  </tr>
+                  <tr>
+                    <td>After 5 Years</td>
+                    <td>35 journals</td>
+                  </tr>
+                  <tr>
+                    <td>After 10 Years</td>
+                    <td>65 journals</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contributing Countries Row -->
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div class="section-title">
+              <h4 class="mb-3">Contributing Countries</h4>
+            </div>
+            <p>
+              Our global footprint continues to expand as we collaborate with educators and institutions worldwide. We're proud of our growing international network.
+            </p>
+            <!-- Countries Table -->
+            <div class="countries-table mt-4">
+              <table class="table table-bordered">
+                <thead class="table-primary">
+                  <tr>
+                    <th>Timeline</th>
+                    <th>Contributing Countries</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Current</td>
+                    <td>10 countries</td>
+                  </tr>
+                  <tr>
+                    <td>After 3 Years</td>
+                    <td>25 countries</td>
+                  </tr>
+                  <tr>
+                    <td>After 5 Years</td>
+                    <td>75 countries</td>
+                  </tr>
+                  <tr>
+                    <td>After 10 Years</td>
+                    <td>175 countries</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.7s">
+            <div class="countries-growth-chart">
+              <div class="chart-container" style="height: 300px; position: relative;">
+                <canvas id="countriesGrowthChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            // Team Growth Chart
+            const teamCtx = document.getElementById('teamGrowthChart').getContext('2d');
+            const teamGrowthChart = new Chart(teamCtx, {
+              type: 'line',
+              data: {
+                labels: ['Current', '3 Years', '5 Years', '10 Years'],
+                datasets: [{
+                  label: 'Team Size Projection',
+                  data: [10, 30, 120, 520],
+                  backgroundColor: 'rgba(211, 30, 38, 0.2)',
+                  borderColor: '#d31e26',
+                  borderWidth: 3,
+                  pointBackgroundColor: '#d31e26',
+                  pointRadius: 6,
+                  tension: 0.3
+                }]
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                    title: {
+                      display: true,
+                      text: 'Number of Employees'
+                    }
+                  },
+                  x: {
+                    title: {
+                      display: true,
+                      text: 'Timeline'
+                    }
+                  }
+                },
+                plugins: {
+                  title: {
+                    display: true,
+                    text: 'Team Size Growth Projection'
+                  }
+                }
+              }
+            });
+
+            // Journals Growth Chart
+            const journalsCtx = document.getElementById('journalsGrowthChart').getContext('2d');
+            const journalsGrowthChart = new Chart(journalsCtx, {
+              type: 'bar',
+              data: {
+                labels: ['Current', '3 Years', '5 Years', '10 Years'],
+                datasets: [{
+                  label: 'Number of Journals',
+                  data: [15, 25, 35, 65],
+                  backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                    title: {
+                      display: true,
+                      text: 'Number of Journals'
+                    }
+                  },
+                  x: {
+                    title: {
+                      display: true,
+                      text: 'Timeline'
+                    }
+                  }
+                },
+                plugins: {
+                  title: {
+                    display: true,
+                    text: 'Journal Growth Projection'
+                  }
+                }
+              }
+            });
+
+            // Countries Growth Chart
+            const countriesCtx = document.getElementById('countriesGrowthChart').getContext('2d');
+            const countriesGrowthChart = new Chart(countriesCtx, {
+              type: 'line',
+              data: {
+                labels: ['Current', '3 Years', '5 Years', '10 Years'],
+                datasets: [{
+                  label: 'Contributing Countries',
+                  data: [10, 25, 75, 175],
+                  backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                  borderColor: 'rgba(75, 192, 192, 1)',
+                  borderWidth: 3,
+                  pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+                  pointRadius: 6,
+                  tension: 0.3
+                }]
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                    title: {
+                      display: true,
+                      text: 'Number of Countries'
+                    }
+                  },
+                  x: {
+                    title: {
+                      display: true,
+                      text: 'Timeline'
+                    }
+                  }
+                },
+                plugins: {
+                  title: {
+                    display: true,
+                    text: 'Global Reach Projection'
+                  }
+                }
+              }
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+  <!-- Team Size Stastistics End -->
+
   <!-- Facts Start -->
   <a id="services-link" href="/services" style="display: none;"></a>
   <script>
