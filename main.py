@@ -46,6 +46,10 @@ def About():
 def Services():
     return render_template("service.html")
 
+@app.route("/services/text-book-publication")
+def TextBookPublication():
+    return render_template("text-book-publication.html")
+
 @app.route("/projects")
 def Projects():
     return render_template("project.html")

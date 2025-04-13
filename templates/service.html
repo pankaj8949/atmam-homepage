@@ -1,4 +1,6 @@
 {% extends "layout.html" %}
+{% from "components/service_card.html" import service_card %}
+
 {% block body %}
 
 <body>
@@ -36,142 +38,91 @@
         </div>
 
         <!-- Service 1 - Web Development -->
-        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="col-lg-6">
-            <div class="position-relative overflow-hidden rounded">
-              <img src="{{ url_for('static', filename='img/web-dev.webp') }}" alt="Web Development" class="img-fluid w-100 shadow-lg" style="aspect-ratio: 16/9; object-fit: cover;">
-              <div class="overlay-gradient"></div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="service-text">
-              <i class="fas fa-code fa-3x txt-primary mb-3"></i>
-              <h3 class="mb-3">Web Development</h3>
-              <p>
-                We craft visually appealing and highly functional websites that engage users and drive results. Our
-                expertise spans across responsive designs, CMS development, e-commerce platforms, and API integration.
-              </p>
-              <ul class="service-list">
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Responsive and Mobile-First Design</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Custom CMS and API Development</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>SEO-Optimized Websites</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>E-commerce Solutions</li>
-              </ul>
-              <a href="https://redevs.atmam.org" target="_blank" rel="noopener noreferrer" aria-label="Request a Quote" class="btn btn-outline-body mt-3">Request a Quote</a>
-            </div>
-          </div>
-        </div>
+        {{ service_card(
+            title="Web Development",
+            description="We craft visually appealing and highly functional websites that engage users and drive results. Our expertise spans across responsive designs, CMS development, e-commerce platforms, and API integration.",
+            image_path="img/web-dev.webp",
+            icon_class="fas fa-code",
+            features=[
+                "Responsive and Mobile-First Design",
+                "Custom CMS and AP  I Development",
+                "SEO-Optimized Websites",
+                "E-commerce Solutions"
+            ],
+            cta_text="Request a Quote",
+            cta_link="/service/web-development",
+            delay="0.1s"
+        ) }}
 
         <!-- Service 2 - Software Development -->
-        <div class="row g-5 align-items-center mb-5 flex-row-reverse wow fadeInUp" data-wow-delay="0.3s">
-          <div class="col-lg-6">
-            <div class="position-relative overflow-hidden rounded">
-              <img src="{{ url_for('static', filename='img/desktop.webp') }}" alt="Software Development" class="img-fluid w-100 shadow-lg" style="aspect-ratio: 16/9; object-fit: cover;">
-              <div class="overlay-gradient"></div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="service-text">
-              <i class="fas fa-laptop-code fa-3x txt-primary mb-3"></i>
-              <h3 class="mb-3">Software Development</h3>
-              <p>
-                Our custom software solutions enhance business efficiency by automating processes and providing tailored
-                digital solutions. We specialize in desktop, web, and mobile applications that transform how you operate.
-              </p>
-              <ul class="service-list">
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Custom Software Solutions</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Cloud-Based Application Development</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>API and System Integration</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Mobile App Development</li>
-              </ul>
-              <a href="https://redevs.atmam.org" target="_blank" rel="noopener noreferrer" aria-label="Discuss Your Project" class="btn btn-outline-body mt-3">Discuss Your Project</a>
-            </div>
-          </div>
-        </div>
+        {{ service_card(
+            title="Software Development",
+            description="Our custom software solutions enhance business efficiency by automating processes and providing tailored digital solutions. We specialize in desktop, web, and mobile applications that transform how you operate.",
+            image_path="img/desktop.webp",
+            icon_class="fas fa-laptop-code",
+            features=[
+                "Custom Software Solutions",
+                "Cloud-Based Application Development",
+                "API and System Integration",
+                "Mobile App Development"
+            ],
+            cta_text="Discuss Your Project",
+            cta_link="/service/software-development",
+            delay="0.3s",
+            reverse=true
+        ) }}
 
         <!-- Service 3 - Research Journal Publications -->
-        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="col-lg-6">
-            <div class="position-relative overflow-hidden rounded">
-              <img src="{{ url_for('static', filename='img/journal.webp') }}" alt="Research Journal Publications" class="img-fluid w-100 shadow-lg" style="aspect-ratio: 16/9; object-fit: cover;">
-              <div class="overlay-gradient"></div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="service-text">
-              <i class="fas fa-book-open fa-3x txt-primary mb-3"></i>
-              <h3 class="mb-3">Research Journal Publications</h3>
-              <p>
-                We publish high-quality research journals, offering a platform for scholars to share their knowledge and
-                contribute to the global academic community through rigorous peer-review processes.
-              </p>
-              <ul class="service-list">
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Peer-Reviewed International Journals</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Open Access Publication Model</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Global Distribution and Indexing</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Citation and Impact Factor Support</li>
-              </ul>
-              <a href="https://abhijournals.com" target="_blank" rel="noopener noreferrer" aria-label="Submit Your Research" class="btn btn-outline-body mt-3">Submit Your Research</a>
-            </div>
-          </div>
-        </div>
+        {{ service_card(
+            title="Research Journal Publications",
+            description="We provide a platform for researchers and academicians to publish their work in our peer-reviewed journals. Our publication process ensures high-quality research dissemination.",
+            image_path="img/journal.webp",
+            icon_class="fas fa-book-open",
+            features=[
+                "Peer-Reviewed Journals",
+                "Open Access Publishing",
+                "Rapid Publication Process",
+                "Global Research Visibility"
+            ],
+            cta_text="Submit Your Research",
+            cta_link="/service/research-journal-publications",
+            delay="0.5s"
+        ) }}
 
         <!-- Service 4 - Educational Trainings -->
-        <div class="row g-5 align-items-center mb-5 flex-row-reverse wow fadeInUp" data-wow-delay="0.1s">
-          <div class="col-lg-6">
-            <div class="position-relative overflow-hidden rounded">
-              <img src="{{ url_for('static', filename='img/girl-with-laptop.webp') }}" alt="Educational Trainings" class="img-fluid w-100 shadow-lg" style="aspect-ratio: 16/9; object-fit: cover;">
-              <div class="overlay-gradient"></div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="service-text">
-              <i class="fas fa-graduation-cap fa-3x txt-primary mb-3"></i>
-              <h3 class="mb-3">Educational Trainings</h3>
-              <p>
-                Our training programs are designed to enhance the skills of learners by providing industry-relevant
-                knowledge in emerging technologies and research methodologies with hands-on experience.
-              </p>
-              <ul class="service-list">
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Hands-On Workshops and Certifications</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Mentorship by Industry Experts</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Practical, Project-Based Learning</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Customized Corporate Training Programs</li>
-              </ul>
-              <a href="/contact" aria-label="Enroll Now" class="btn btn-outline-body mt-3">Enroll Now</a>
-            </div>
-          </div>
-        </div>
+        {{ service_card(
+            title="Educational Trainings",
+            description="Our training programs are designed to enhance the skills of learners by providing industry-relevant knowledge in emerging technologies and research methodologies with hands-on experience.",
+            image_path="img/girl-with-laptop.webp",
+            icon_class="fas fa-graduation-cap",
+            features=[
+                "Hands-On Workshops and Certifications",
+                "Mentorship by Industry Experts",
+                "Practical, Project-Based Learning",
+                "Customized Corporate Training Programs"
+            ],
+            cta_text="Enroll Now",
+            cta_link="/service/educational-trainings",
+            delay="0.1s",
+            reverse=true
+        ) }}
 
         <!-- Service 5 - Textbook Publications -->
-        <div class="row g-5 align-items-center mb-5 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="col-lg-6">
-            <div class="position-relative overflow-hidden rounded">
-              <img src="{{ url_for('static', filename='img/book-with-pen.webp') }}" alt="Textbook Publications" class="img-fluid w-100 shadow-lg" style="aspect-ratio: 16/9; object-fit: cover;">
-              <div class="overlay-gradient"></div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="service-text">
-              <i class="fas fa-book fa-3x txt-primary mb-3"></i>
-              <h3 class="mb-3">Textbook Publications</h3>
-              <p>
-                We publish educational textbooks aligned with modern curricula, ensuring comprehensive and quality
-                content that meets the needs of learners across various educational levels and disciplines.
-              </p>
-              <ul class="service-list">
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Curriculum-Based Publications</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Digital and Print Editions</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Global Reach and Impact</li>
-                <li><i class="fas fa-check-circle txt-primary me-2"></i>Interactive Learning Materials</li>
-              </ul>
-              <a href="/contact" aria-label="Explore Our Publications" class="btn btn-outline-body mt-3">Explore Our Publications</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
+        {{ service_card(
+            title="Textbook Publications",
+            description="We publish educational textbooks aligned with modern curricula, ensuring comprehensive and quality content that meets the needs of learners across various educational levels and disciplines.",
+            image_path="img/book-with-pen.webp",
+            icon_class="fas fa-book",
+            features=[
+                "Curriculum-Based Publications",
+                "Digital and Print Editions",
+                "Global Reach and Impact",
+                "Interactive Learning Materials"
+            ],
+            cta_text="Explore Our Publications",
+            cta_link="/services/text-book-publication",
+            delay="0.3s"
+        ) }}
   </section>
   <!-- Service End -->
 
