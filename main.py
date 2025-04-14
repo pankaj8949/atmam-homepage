@@ -34,6 +34,10 @@ def sitemap():
 def robots():
     return send_from_directory(app.static_folder, 'robots.txt', mimetype='text/plain')
 
+@app.route("/ads.txt")
+def ads():
+    return send_from_directory(app.static_folder, 'ads.txt', mimetype='text/plain')
+
 @app.route("/")
 def Home():
     return render_template("index.html")
