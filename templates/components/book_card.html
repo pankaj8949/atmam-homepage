@@ -1,30 +1,54 @@
 {% macro book_card(title, description, image_path, delay="0.1s") %}
 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ delay }}">
     <div class="service-item rounded h-100 p-4 book-card">
-        <div class="d-flex align-items-center mb-4">
-            <div class="flex-shrink-0 position-relative">
-                <div class="book-cover-wrapper">
-                    <img src="{{ url_for('static', filename=image_path) }}"
-                        alt="{{ title }}" class="img-fluid rounded shadow-sm"
-                        style="width: 100px; height: 150px; object-fit: cover;"
-                        onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2RkZCIgZD0iTTE4IDJINmMtMS4xIDAtMiAuOS0yIDJ2MTZjMCAxLjEuOSAyIDIgMmgxMmMxLjEgMCAyLS45IDItMlY0YzAtMS4xLS45LTItMi0yem0wIDE4SDZWNGgxMnYxNnptLTUtMkgxMXYtMmgydjJ6bTAtNEgxMXYtMmgydjJ6bTAtNEgxMXYtMmgydjJ6Ii8+PC9zdmc+'">
-                    <div class="book-overlay"></div>
-                </div>
+        <div class="d-flex flex-column">
+            <div class="book-cover-wrapper mb-3">
+                <img src="{{ url_for('static', filename=image_path) }}"
+                    alt="{{ title }}" class="img-fluid rounded shadow-sm book-cover"
+                    onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2RkZCIgZD0iTTE4IDJINmMtMS4xIDAtMiAuOS0yIDJ2MTZjMCAxLjEuOSAyIDIgMmgxMmMxLjEgMCAyLS45IDItMlY0YzAtMS4xLS45LTItMi0yem0wIDE4SDZWNGgxMnYxNnptLTUtMkgxMXYtMmgydjJ6bTAtNEgxMXYtMmgydjJ6bTAtNEgxMXYtMmgydjJ6Ii8+PC9zdmc+'">
             </div>
-            <div class="flex-grow-1 ms-3">
+            <div class="book-content">
                 <h5 class="mb-2 text-dark">{{ title }}</h5>
-                <p class="mb-0 text-muted">{{ description }}</p>
+                <p class="mb-3 text-muted">{{ description }}</p>
+                <a href="#" class="btn btn-primary btn-sm rounded-pill px-4 py-2 learn-more-btn position-relative overflow-hidden">
+                    <span class="btn-text position-relative z-1">Learn More</span>
+                    <i class="fas fa-arrow-right ms-2 btn-icon position-relative z-1"></i>
+                    <span class="btn-hover-effect position-absolute top-0 start-0 w-100 h-100 bg-white opacity-0"></span>
+                </a>
             </div>
         </div>
-        <a href="#" class="btn btn-primary btn-sm rounded-pill px-4 py-2 learn-more-btn position-relative overflow-hidden">
-            <span class="btn-text position-relative z-1">Learn More</span>
-            <i class="fas fa-arrow-right ms-2 btn-icon position-relative z-1"></i>
-            <span class="btn-hover-effect position-absolute top-0 start-0 w-100 h-100 bg-white opacity-0"></span>
-        </a>
     </div>
 </div>
 
 <style>
+    .book-card {
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .book-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-cover-wrapper {
+        position: relative;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .book-cover {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-color: #f8f9fa;
+    }
+
+    .book-content {
+        text-align: center;
+    }
+
     .learn-more-btn {
         transition: all 0.3s ease;
         background: linear-gradient(45deg, var(--bs-primary), #0056b3);
@@ -35,7 +59,7 @@
     .learn-more-btn:hover {
         transform: translateY(-2px);
         background: linear-gradient(45deg, var(--bs-primary), #0056b3);
-        color:black;
+        color: black;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
