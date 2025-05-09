@@ -3,105 +3,6 @@
 
 <body>
 
-  <!-- Carousel Start -->
-  <!-- <section>
-      <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="owl-carousel header-carousel position-relative">
-          <div
-            class="owl-carousel-item position-relative"
-            data-dot="<img src='{{ url_for('static', filename='img/carousel-1.jpg') }}'>"
-          >
-            <img
-              class="img-fluid"
-              src="{{ url_for('static', filename='img/carousel-1.jpg') }}"
-              alt="Modern Architecture"
-            />
-            <div class="owl-carousel-inner">
-              <div class="container">
-                <div class="row justify-content-start">
-                  <div class="col-10 col-lg-10">
-                    <h1 class="display-4 text-white animated slideInDown">
-                      Inspiring Architecture & Interiors
-                    </h1>
-                    <p class="fs-5 fw-medium text-white mb-4 pb-3">
-                      Redefining spaces with modern architecture and elegant
-                      interiors tailored to your vision.
-                    </p>
-                    <a
-                      href="#"
-                      class="btn btn-inline-body py-3 px-5 animated slideInLeft"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="owl-carousel-item position-relative"
-            data-dot="<img src='{{ url_for('static', filename='img/carousel-2.jpg') }}'>"
-          >
-            <img
-              class="img-fluid"
-              src="{{ url_for('static', filename='img/carousel-2.jpg') }}"
-              alt="Interior Design Showcase"
-            />
-            <div class="owl-carousel-inner">
-              <div class="container">
-                <div class="row justify-content-start">
-                  <div class="col-10 col-lg-10">
-                    <h1 class="display-4 text-white animated slideInDown">
-                      Elevate Your Living Spaces
-                    </h1>
-                    <p class="fs-5 fw-medium text-white mb-4 pb-3">
-                      Stylish and functional designs that transform homes and
-                      workplaces with creativity.
-                    </p>
-                    <a
-                      href="#"
-                      class="btn btn-inline-body py-3 px-5 animated slideInLeft"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="owl-carousel-item position-relative"
-            data-dot="<img src='{{ url_for('static', filename='img/carousel-3.jpg') }}'>"
-          >
-            <img
-              class="img-fluid"
-              src="{{ url_for('static', filename='img/carousel-3.jpg') }}"
-              alt="Creative Designs"
-            />
-            <div class="owl-carousel-inner">
-              <div class="container">
-                <div class="row justify-content-start">
-                  <div class="col-10 col-lg-10">
-                    <h1 class="display-4 text-white animated slideInDown">
-                      Creative and Functional Designs
-                    </h1>
-                    <p class="fs-5 fw-medium text-white mb-4 pb-3">
-                      Designs that combine beauty and practicality, creating
-                      timeless spaces.
-                    </p>
-                    <a
-                      href="#"
-                      class="btn btn-inline-body py-3 px-5 animated slideInLeft"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-  <!-- Carousel End -->
-
   <!-- Hero Section-->
 
   <section class="hero-section py-5" id="hero">
@@ -119,7 +20,6 @@
       </div>
     </div>
   </section>
-  <br><br><br>
 
   <!-- HERO Section End -->
   <!-- About Start -->
@@ -146,32 +46,97 @@
               personalized learning experiences. Whether it's interactive modules, expert-curated content, or skill
               development programs, we strive to nurture a culture of continuous learning and growth.
             </p>
-            <!-- <div class="d-flex align-items-center mb-4"> -->
-            <!-- <div
-                  class="d-flex flex-shrink-0 align-items-center justify-content-center txt-primary"
-                  style="width: 80px; height: 80px; border: 5px solid #d31e26"
-                >
-                  <h5 class="display-6 fw-bold" data-toggle="counter-up">25</h5>
-                </div> -->
-            <!-- <div class="ps-4">
-                  <h4>Years</h4>
-                  <h4 class="mb-0">Working Experience</h4>
-                </div> -->
-            <!-- </div> -->
             <br>
             <a class="btn btn-inline-body py-3 px-5" aria-label="Read More" href="/about">Read More</a>
           </div>
           <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
             <img class="img-fluid rounded" src="{{ url_for('static', filename='img/about.webp') }}"
-              alt="Creative Architecture" 
-              style="width: 100%; height: 50%; object-fit: cover;"
-              />
+              alt="Creative Architecture" style="width: 100%; height: 50%; object-fit: cover;" />
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- About End -->
+
+  <!-- Text Books Slider Start -->
+  <section class="py-4">
+    <div class="container-xxl">
+      <div class="container">
+        <div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px">
+          <div class="section-title">
+            <h6>Our Publications</h6>
+            <h2 class="mb-4">Featured Text Books</h2>
+          </div>
+          <p class="lead text-muted">Explore our collection of high-quality textbooks designed to enhance learning
+            experiences.</p>
+        </div>
+
+        <div class="row g-4 wow fadeInUp" data-wow-delay="0.1s">
+          <!-- Book 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card border-0 shadow-sm">
+              <div class="book-image-container" style="height: 150px; overflow: hidden; object-fit: fill;">
+                <img src="{{ url_for('static', filename='img/textbooks/1.png') }}" class="card-img-top"
+                  alt="Data Analytics" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="mb-3">Data Analytics</h5>
+                <p class="mb-0">Comprehensive guide to data analysis techniques</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card border-0 shadow-sm">
+              <div class="book-image-container" style="height: 150px; overflow: hidden;">
+                <img src="{{ url_for('static', filename='img/textbooks/2.png') }}" class="card-img-top"
+                  alt="Python Programming" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="mb-3">Python Programming</h5>
+                <p class="mb-0">Master the fundamentals of Python programming</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card  border-0 shadow-sm">
+              <div class="book-image-container" style="height: 150px; overflow: hidden;">
+                <img src="{{ url_for('static', filename='img/textbooks/3.png') }}" class="card-img-top"
+                  alt="TensorFlow Python Programming" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="mb-3">TensorFlow Python Programming</h5>
+                <p class="mb-0">Deep learning and neural networks with TensorFlow</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card  border-0 shadow-sm">
+              <div class="book-image-container" style="height: 150px; overflow: hidden;">
+                <img src="{{ url_for('static', filename='img/textbooks/4.png') }}" class="card-img-top"
+                  alt="Python NumPy and Matplotlib" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="mb-3">Python NumPy and Matplotlib</h5>
+                <p class="mb-0">Scientific computing and visualization with Python</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="services/text-book-publication" class="btn btn-inline-body py-3 px-5">View All Books</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Text Books Slider End -->
 
   <!-- Team Size Stastistics Start -->
   <section id="team-size-statistics">
@@ -195,7 +160,8 @@
               <h3 class="mb-3">Team Size Growth</h3>
             </div>
             <p>
-              Our team is comprised of experienced professionals who are dedicated to providing the best possible service
+              Our team is comprised of experienced professionals who are dedicated to providing the best possible
+              service
               to our clients. We are continuously growing to meet the increasing demands of the education sector.
             </p>
             <!-- Team Size Table -->
@@ -251,7 +217,8 @@
               <h3 class="mb-3">Number of Journals</h3>
             </div>
             <p>
-              We are committed to expanding our academic reach through quality publications. Our journal portfolio is growing steadily to cover diverse educational domains.
+              We are committed to expanding our academic reach through quality publications. Our journal portfolio is
+              growing steadily to cover diverse educational domains.
             </p>
             <!-- Journals Table -->
             <div class="journals-table mt-4">
@@ -292,7 +259,8 @@
               <h3 class="mb-3">Contributing Countries</h3>
             </div>
             <p>
-              Our global footprint continues to expand as we collaborate with educators and institutions worldwide. We're proud of our growing international network.
+              Our global footprint continues to expand as we collaborate with educators and institutions worldwide.
+              We're proud of our growing international network.
             </p>
             <!-- Countries Table -->
             <div class="countries-table mt-4">
@@ -336,7 +304,7 @@
         <!-- Charts JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
-          document.addEventListener('DOMContentLoaded', function() {
+          document.addEventListener('DOMContentLoaded', function () {
             // Team Growth Chart
             const teamCtx = document.getElementById('teamGrowthChart').getContext('2d');
             const teamGrowthChart = new Chart(teamCtx, {
@@ -574,79 +542,6 @@
   <!-- Facts End -->
 
 
-
-  <!-- Feature Start -->
-  <!-- <section>
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-              <div class="feature-img">
-                <img class="img-fluid" src="{{ url_for('static', filename='img/about-2.jpg') }}" alt="About" />
-                <img class="img-fluid" src="{{ url_for('static', filename='img/about-1.jpg') }}" alt="About" />
-              </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="section-title">
-                <h6>Why Choose Us!</h6>
-                <h2 class="mb-4">
-                  Why You Should Trust Us? Learn More About Us!
-                </h2>
-              </div>
-              <p class="mb-4">
-                We blend creativity with technical expertise, ensuring that
-                every project we take on is a perfect combination of form and
-                function. Our dedicated team is here to turn your vision into
-                reality.
-              </p>
-              <div class="row g-4">
-                <div class="col-12">
-                  <div class="d-flex align-items-start">
-                    <i class="fas fa-pencil-alt fa-3x txt-primary"></i>
-                    <div class="ms-4">
-                      <h3>Design Approach</h3>
-                      <p class="mb-0">
-                        We emphasize a client-centered approach, ensuring that
-                        every design reflects your unique vision while balancing
-                        innovation and practicality.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="d-flex align-items-start">
-                    <i class="fas fa-lightbulb fa-3x txt-primary"></i>
-                    <div class="ms-4">
-                      <h3>Innovative Solutions</h3>
-                      <p class="mb-0">
-                        Our team stays at the forefront of trends, delivering
-                        cutting-edge solutions that meet both your needs and the
-                        evolving demands of the industry.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="d-flex align-items-start">
-                    <i class="fas fa-project-diagram fa-3x txt-primary"></i>
-                    <div class="ms-4">
-                      <h3>Project Management</h3>
-                      <p class="mb-0">
-                        From conception to completion, we manage every aspect of
-                        the project, ensuring timely delivery and exceptional
-                        quality at every stage.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-  <!-- Feature End -->
-
   <!-- Project Start -->
   <section id="projects">
     <div class="container-xxl project py-5">
@@ -666,7 +561,7 @@
                 data-bs-target="#tab-pane-1" type="button">
                 Abhi International Journals
               </button>
-              
+
               <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill"
                 data-bs-target="#tab-pane-3" type="button">
                 Conferences
@@ -713,7 +608,7 @@
                   </div>
                 </div>
               </div>
-             
+
               <div class="tab-pane fade" id="tab-pane-3">
                 <div class="row g-4">
                   <div class="col-md-6" style="min-height: 350px">
@@ -742,7 +637,8 @@
                     <p>
                       <i class="fa fa-check txt-primary me-3"></i>Collaborative Opportunities
                     </p>
-                    <a href="/projects" aria-label="View Details" class="btn btn-inline-body py-3 px-5 mt-3">View Details</a>
+                    <a href="/projects" aria-label="View Details" class="btn btn-inline-body py-3 px-5 mt-3">View
+                      Details</a>
                   </div>
                 </div>
               </div>
@@ -775,7 +671,8 @@
                     <p>
                       <i class="fa fa-check txt-primary me-3"></i>Personalized Templates
                     </p>
-                    <a href="/projects" aria-label="View Details" class="btn btn-inline-body py-3 px-5 mt-3">View Details</a>
+                    <a href="/projects" aria-label="View Details" class="btn btn-inline-body py-3 px-5 mt-3">View
+                      Details</a>
                   </div>
                 </div>
               </div>
@@ -913,187 +810,8 @@
     }
   </style>
 
-  <!-- Team Start -->
-  <!-- <section>
-  <div class="container-xxl py-5">
-    <div class="container">
-      <div
-        class="text-center mx-auto mb-5 wow fadeInUp"
-        data-wow-delay="0.1s"
-        style="max-width: 600px"
-      >
-        <div class="section-title">
-          <h6>Team Members</h6>
-          <h2 class="mb-4">
-            Our Genious Team Members
-          </h2>
-        </div>
-      </div>
-      <div class="row g-0 team-items">
-        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="team-item position-relative">
-            <div class="position-relative">
-              <img
-                class="img-fluid"
-                src="{{ url_for('static', filename='img/team-1.jpg') }}"
-                alt="Team Member"
-              />
-              <div class="team-social text-center">
-                <a class="btn btn-square" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-square" href=""
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-                <a class="btn btn-square" href=""
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-            </div>
-            <div class="bg-light text-center p-4">
-              <h3 class="mt-2">John Doe</h3>
-              <span>Role</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="team-item position-relative">
-            <div class="position-relative">
-              <img
-                class="img-fluid"
-                src="{{ url_for('static', filename='img/team-2.jpg') }}"
-                alt="Team Member"
-              />
-              <div class="team-social text-center">
-                <a class="btn btn-square" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-square" href=""
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-                <a class="btn btn-square" href=""
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-            </div>
-            <div class="bg-light text-center p-4">
-              <h3 class="mt-2">James Smith</h3>
-              <span>Role</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="team-item position-relative">
-            <div class="position-relative">
-              <img
-                class="img-fluid"
-                src="{{ url_for('static', filename='img/team-3.jpg') }}"
-                alt="Team Member"
-              />
-              <div class="team-social text-center">
-                <a class="btn btn-square" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-square" href=""
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-                <a class="btn btn-square" href=""
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-            </div>
-            <div class="bg-light text-center p-4">
-              <h3 class="mt-2">Johnson</h3>
-              <span>Role</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-          <div class="team-item position-relative">
-            <div class="position-relative">
-              <img
-                class="img-fluid"
-                src="{{ url_for('static', filename='img/team-4.jpg') }}"
-                alt="Team Member"
-              />
-              <div class="team-social text-center">
-                <a class="btn btn-square" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-square" href=""
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-                <a class="btn btn-square" href=""
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-            </div>
-            <div class="bg-light text-center p-4">
-              <h3 class="mt-2">David Brown</h3>
-              <span>Role</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-  <!-- Team End -->
-
-
-  <!-- Testimonial Start -->
-  <!-- <section>
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
-          <div class="section-title">
-            <h6>Testimonial</h6>
-            <h2 class="mb-4">
-              Thousands Of Customers Who Trust Us And Our Services
-            </h2>
-          </div>
-        </div>
-        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-          <div class="testimonial-item text-center"
-            data-dot="<img class='img-fluid' src='{{ url_for('static', filename='img/testimonial-1.jpg') }}' alt=''>">
-            <p class="fs-5">
-              "Working with this team was a game-changer for our project.
-              Their attention to detail and creativity brought our vision to
-              life in a way we never imagined. We saw an immediate improvement
-              in user engagement after launch!"
-            </p>
-            <h3>Steve Smith</h3>
-            <span>Marketing Director, ABC Corp</span>
-          </div>
-          <div class="testimonial-item text-center"
-            data-dot="<img class='img-fluid' src='{{ url_for('static', filename='img/testimonial-2.jpg') }}' alt=''>">
-            <p class="fs-5">
-              "I highly recommend this team for any web design and development
-              needs. The quality of their work and the professionalism they
-              bring to every project is unmatched. They really took the time
-              to understand our brand."
-            </p>
-            <h3>Michael Lee</h3>
-            <span>CEO, Digital Solutions</span>
-          </div>
-          <div class="testimonial-item text-center"
-            data-dot="<img class='img-fluid' src='{{ url_for('static', filename='img/testimonial-3.jpg') }}' alt=''>">
-            <p class="fs-5">
-              "The team was extremely responsive and efficient. They helped us
-              not only with the web design but also improved our overall user
-              experience. We are thrilled with the outcome and would
-              definitely work with them again."
-            </p>
-            <h3>Rachel Williams</h3>
-            <span>Product Manager, Tech Innovations</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- Testimonial End -->
-
 </body>
+
 
 </html>
 {% endblock %}
