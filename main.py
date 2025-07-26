@@ -58,6 +58,10 @@ def TextBookPublication():
 def Projects():
     return render_template("project.html")
 
+@app.route("/membership")
+def Membership():
+    return render_template("membership.html")
+
 @app.route("/contact") 
 def Contact():
     return render_template("contact.html")
